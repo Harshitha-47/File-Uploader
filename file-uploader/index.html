@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern File Uploader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Dark Mode Toggle -->
+        <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- Upload Card -->
+        <div class="upload-card">
+            <h1 class="title">File Uploader</h1>
+            <p class="subtitle">Upload your documents, images, and files securely</p>
+
+            <!-- Drop Zone -->
+            <div class="drop-zone" id="dropZone">
+                <input type="file" id="fileInput" multiple hidden>
+                <div class="drop-zone-content">
+                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                    <h3>Drag & Drop your files here</h3>
+                    <p>or</p>
+                    <button class="browse-btn" id="browseBtn">Click to Browse</button>
+                    <p class="file-info">Supported: JPG, PNG, PDF, DOCX (Max 5MB)</p>
+                </div>
+            </div>
+
+            <!-- File List -->
+            <div class="file-list" id="fileList"></div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons" id="actionButtons" style="display: none;">
+                <button class="btn btn-clear" id="clearBtn">
+                    <i class="fas fa-trash"></i> Clear All
+                </button>
+                <button class="btn btn-upload" id="uploadBtn">
+                    <i class="fas fa-upload"></i> Upload Files
+                </button>
+            </div>
+
+            <!-- File Counter -->
+            <div class="file-counter" id="fileCounter" style="display: none;">
+                <i class="fas fa-file"></i>
+                <span id="fileCount">0</span> file(s) selected
+            </div>
+        </div>
+
+        <!-- Toast Notification -->
+        <div class="toast" id="toast"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
